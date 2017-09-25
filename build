@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -e
+
+# goofy way to get the script directory
+pushd "$(dirname "$0")" > /dev/null
+SCRIPT_DIR="$(pwd)"
+popd > /dev/null
+
+SRC_DIR="$SCRIPT_DIR"/src
+TGT_DIR="$SCRIPT_DIR"/tgt
+
+# clean tgt directory
+rm -rf "$TGT_DIR"
+mkdir -p "$TGT_DIR"
+
+clang                         \
+	-fwrapv                   \
+	-Werror                   \
+	-o "$TGT_DIR"/basicwav    \
+	"$SRC_DIR"/main.c         \
+	"$SRC_DIR"/basicwav.c
