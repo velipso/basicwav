@@ -40,27 +40,24 @@ RIFF Info Chunks
 | `ILGT` | Lightness settings                                                       |
 | `IMED` | Medium                                                                   |
 | `INAM` | Name of subject                                                          |
-| `IPLT` | Palette Settings. No. of colors requested.                               |
+| `IPLT` | Palette Settings - number of colors requested                            |
 | `IPRD` | Product                                                                  |
 | `ISBJ` | Subject description                                                      |
-| `ISFT` | Software. Name of package used to create file.                           |
-| `ISHP` | Sharpness.                                                               |
-| `ISRC` | Source.                                                                  |
+| `ISFT` | Software - name of package used to create file                           |
+| `ISHP` | Sharpness                                                                |
+| `ISRC` | Source                                                                   |
 | `ISRF` | Source Form. ie slide, paper                                             |
-| `ITCH` | Technician who digitized the subject.                                    |
+| `ITCH` | Technician who digitized the subject                                     |
 | `ISMP` | SMPTE time code[1]                                                       |
 | `IDIT` | Digitization Time[2]                                                     |
-| `ITRK` | ASCIIZ representation of the 1-based track number of the content.        |
-| `ITOC` | A dump of the table of contents from the CD the content originated from. |
+| `ITRK` | ASCIIZ representation of the 1-based track number of the content         |
+| `ITOC` | A dump of the table of contents from the CD the content originated from  |
 
 Note[1]: SMPTE time code of digitization start point expressed as a NULL terminated text string
-"HH:MM:SS:FF".
+"`HH:MM:SS:FF`".
 
-Note[2]: "Digitization Time" Specifies the time and date that the digitization commenced. The
-digitization time is contained in an ASCII string which contains exactly 26 characters and is in the
-format "`Wed Jan 02 02:03:55 1990\n\0`". The ctime(), asctime(), functions can be used to create
-strings in this format. This chunk is automatically added to the capture file based on the current
-system time at the moment capture is initiated.
+Note[2]: The digitization time is contained in an ASCII string which contains exactly 26 characters
+and is in the format "`Wed Jan 02 02:03:55 1990\n\0`".
 
 WAV Format
 ----------
