@@ -58,7 +58,7 @@ Note[1]: SMPTE time code of digitization start point expressed as a NULL termina
 
 Note[2]: "Digitization Time" Specifies the time and date that the digitization commenced. The
 digitization time is contained in an ASCII string which contains exactly 26 characters and is in the
-format "Wed Jan 02 02:03:55 1990\n\0". The ctime(), asctime(), functions can be used to create
+format "`Wed Jan 02 02:03:55 1990\n\0`". The ctime(), asctime(), functions can be used to create
 strings in this format. This chunk is automatically added to the capture file based on the current
 system time at the moment capture is initiated.
 
