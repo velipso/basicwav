@@ -5,4 +5,7 @@
 #ifndef BASICWAV__H
 #define BASICWAV__H
 
+typedef struct {
+} bw_sample_st;
+
 #endif // BASICWAV__H
