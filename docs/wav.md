@@ -40,13 +40,13 @@ RIFF Info Chunks
 | `ILGT` | Lightness settings                                                       |
 | `IMED` | Medium                                                                   |
 | `INAM` | Name of subject                                                          |
-| `IPLT` | Palette Settings - number of colors requested                            |
+| `IPLT` | Palette settings - number of colors requested                            |
 | `IPRD` | Product                                                                  |
 | `ISBJ` | Subject description                                                      |
 | `ISFT` | Software - name of package used to create file                           |
 | `ISHP` | Sharpness                                                                |
 | `ISRC` | Source                                                                   |
-| `ISRF` | Source Form. ie slide, paper                                             |
+| `ISRF` | Source form (i.e. slide, paper)                                          |
 | `ITCH` | Technician who digitized the subject                                     |
 | `ISMP` | SMPTE time code[1]                                                       |
 | `IDIT` | Digitization Time[2]                                                     |
