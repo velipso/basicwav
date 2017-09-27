@@ -339,36 +339,36 @@ Structures
 
 ```c
 typedef struct waveformat_tag {
-    WORD wFormatTag;        /* format type */
-    WORD nChannels;         /* number of channels (i.e. mono, stereo...) */
-    DWORD nSamplesPerSec;   /* sample rate */
-    DWORD nAvgBytesPerSec;  /* for buffer estimation */
-    WORD nBlockAlign;       /* block size of data */
+	WORD wFormatTag;
+	WORD nChannels;
+	DWORD nSamplesPerSec;
+	DWORD nAvgBytesPerSec;
+	WORD nBlockAlign;
 } WAVEFORMAT;
 
 typedef struct pcmwaveformat_tag {
-    WAVEFORMAT wf;
-    WORD wBitsPerSample;
+	WAVEFORMAT wf;
+	WORD wBitsPerSample;
 } PCMWAVEFORMAT;
 
 typedef struct tWAVEFORMATEX {
-    WORD wFormatTag;       /* format type */
-    WORD nChannels;        /* number of channels (i.e. mono, stereo...) */
-    DWORD nSamplesPerSec;  /* sample rate */
-    DWORD nAvgBytesPerSec; /* for buffer estimation */
-    WORD nBlockAlign;      /* block size of data */
-    WORD wBitsPerSample;   /* Number of bits per sample of mono data */
-    WORD cbSize;           /* The count in bytes of the size of extra information (after cbSize) */
+	WORD wFormatTag;
+	WORD nChannels;
+	DWORD nSamplesPerSec;
+	DWORD nAvgBytesPerSec;
+	WORD nBlockAlign;
+	WORD wBitsPerSample;
+	WORD cbSize;
 } WAVEFORMATEX;
 
 typedef struct {
 	WAVEFORMATEX Format;
 	union {
-		WORD wValidBitsPerSample; /* bits of precision  */
-		WORD wSamplesPerBlock;    /* valid if wBitsPerSample==0 */
-		WORD wReserved;           /* If neither applies, set to zero. */
+		WORD wValidBitsPerSample;
+		WORD wSamplesPerBlock;
+		WORD wReserved;
 	} Samples;
-	DWORD dwChannelMask;          /* which channels are present in stream  */
+	DWORD dwChannelMask;
 	GUID SubFormat;
 } WAVEFORMATEXTENSIBLE;
 
