@@ -1,11 +1,13 @@
-WAV File Format
-===============
+WAV File Format (basic)
+=======================
 
-This is my attempt to document the .WAV file format as much as I can.
+This is my attempt to document the .WAV file format for basic usage.
 
-Unfortunately, there isn't a single authoritative source for the .WAV file format.  It's easy to
-save and load 16-bit mono/stereo samples, but there's a lot of extra hocus pocus hidden for anything
-more than that.
+A full specification of the .WAV file format would be incredibly complicated because the format has
+a wide range of compression options, including MP3, ALAC, Vorbis, and FLAC.  These are simply
+ignored.
+
+Most people know .WAV for uncompressed raw audio, which is what `basicwav` focuses on.
 
 Links of Interest
 -----------------
@@ -368,51 +370,6 @@ typedef struct {
 	DWORD dwChannelMask;
 	GUID SubFormat;
 } WAVEFORMATEXTENSIBLE;
-
-typedef struct adpcmcoef_tag {
-	short iCoef1;
-	short iCoef2;
-} ADPCMCOEFSET;
-
-typedef struct adpcmwaveformat_tag {
-	WAVEFORMATEX wfx;
-	WORD wSamplesPerBlock;
-	WORD wNumCoef;
-	ADPCMCOEFSET aCoef[];
-} ADPCMWAVEFORMAT;
-
-typedef struct dvi_adpcmwaveformat_tag {
-	WAVEFORMATEX wfx;
-	WORD wSamplesPerBlock;
-} DVIADPCMWAVEFORMAT;
-
-typedef struct ima_adpcmwaveformat_tag {
-	WAVEFORMATEX wfx;
-	WORD wSamplesPerBlock;
-} IMAADPCMWAVEFORMAT;
-
-typedef struct msaudio1waveformat_tag {
-	WAVEFORMATEX wfx;
-	WORD wSamplesPerBlock;
-	WORD wEncodeOptions;
-} MSAUDIO1WAVEFORMAT;
-
-typedef struct wmaudio2waveformat_tag {
-	WAVEFORMATEX wfx;
-	DWORD dwSamplesPerBlock;
-	WORD wEncodeOptions;
-	DWORD dwSuperBlockAlign;
-} WMAUDIO2WAVEFORMAT;
-
-typedef struct wmaudio3waveformat_tag {
-	WAVEFORMATEX wfx;
-	WORD wValidBitsPerSample;
-	DWORD dwChannelMask;
-	DWORD dwReserved1;
-	DWORD dwReserved2;
-	WORD wEncodeOptions;
-	WORD wReserved3;
-} WMAUDIO3WAVEFORMAT;
 
 struct tag_s_RIFFWAVE_inst {
 	BYTE bUnshiftedNote;
