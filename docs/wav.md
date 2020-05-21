@@ -67,6 +67,7 @@ WAV Format
 | Format                     | Value    | Company/Owner                       |
 |----------------------------|----------|-------------------------------------|
 | UNKNOWN                    | `0x0000` | Microsoft Corporation               |
+| PCM                        | `0x0001` | Microsoft Corporation               |
 | ADPCM                      | `0x0002` | Microsoft Corporation               |
 | IEEE_FLOAT                 | `0x0003` | Microsoft Corporation               |
 | VSELP                      | `0x0004` | Compaq Computer Corp.               |
@@ -277,13 +278,13 @@ WAV Format
 | LEAD_SPEECH                | `0x434C` | LEAD Technologies                   |
 | LEAD_VORBIS                | `0x564C` | LEAD Technologies                   |
 | WAVPACK_AUDIO              | `0x5756` | xiph.org                            |
-| ALAC                       | `0x6C61` | Apple Lossless                      |
 | OGG_VORBIS_MODE_1          | `0x674F` | Ogg Vorbis                          |
 | OGG_VORBIS_MODE_2          | `0x6750` | Ogg Vorbis                          |
 | OGG_VORBIS_MODE_3          | `0x6751` | Ogg Vorbis                          |
 | OGG_VORBIS_MODE_1_PLUS     | `0x676F` | Ogg Vorbis                          |
 | OGG_VORBIS_MODE_2_PLUS     | `0x6770` | Ogg Vorbis                          |
 | OGG_VORBIS_MODE_3_PLUS     | `0x6771` | Ogg Vorbis                          |
+| ALAC                       | `0x6C61` | Apple Lossless                      |
 | 3COM_NBX                   | `0x7000` | 3COM Corp.                          |
 | OPUS                       | `0x704F` | Opus                                |
 | FAAD_AAC                   | `0x706D` |                                     |
